@@ -21,14 +21,14 @@ jobs:
     runs-on: ubuntu-16.04
 
     env:
-      DEVICE: sumire
+      DEVICE: judypn
       ANDROID_ROOT: /home/runner/work/halium/
 
     steps:
     - name: Checkout
       uses: actions/checkout@master
     
-    - name: Initialization environment
+    - name: Initialization Environment
       run: |
         sudo apt-get update
         sudo apt-get install -y \
@@ -47,8 +47,8 @@ jobs:
         mkdir -p ~/bin
         wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin
         chmod +x ~/bin/repo
-        git config --global user.name "UBports sony-sumire halium CI"
-        git config --global user.email "thisemaildoesnotexist@exist.com"
+        git config --global user.name "mmry2940"
+        git config --global user.email "mmry2940@gmail.com"
     - name: Downloading source code
       run: |
         source halium.env

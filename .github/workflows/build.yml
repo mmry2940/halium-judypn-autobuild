@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-16.04
 
     env:
-      DEVICE: sumire
+      DEVICE: judypn
       ANDROID_ROOT: /home/runner/work/halium/
 
     steps:
@@ -47,8 +47,8 @@ jobs:
         mkdir -p ~/bin
         wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin
         chmod +x ~/bin/repo
-        git config --global user.name "UBports sony-sumire halium CI"
-        git config --global user.email "thisemaildoesnotexist@exist.com"
+        git config --global user.name "mmry2940"
+        git config --global user.email "mmry2940@gmail.com"
     - name: Downloading source code
       run: |
         source halium.env
@@ -64,7 +64,8 @@ jobs:
     - name: Build HAL
       run: |
         source build/envsetup.sh
-        breakfast sumire
+        breakfast judypn
+        mka mkbootimg
         mka halium-boot
         mka systemimage
       shell: bash

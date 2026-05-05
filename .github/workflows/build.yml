@@ -9,6 +9,7 @@
 name: Halium Image
 
 on: 
+  workflow_dispatch:
   push:
     branches:
       - hybris
@@ -16,9 +17,13 @@ on:
     types: [published]
 
 jobs:
-
+  Build-Kernel:
+    strategy:
+      fail-fast:  false
   build:
     runs-on: ubuntu-16.04
+    permissions: 
+      contents: read
 
     env:
       DEVICE: judypn
@@ -69,6 +74,13 @@ jobs:
         mka halium-boot
         mka systemimage
       shell: bash
+
+    - name : Upload mkbootimg
+      uses: actions/upload-artifact@master
+      with:
+        name: hybris-boot image
+        path: /home/runner/work/halium/out/target/product/santoni/boot.img
+
 
     - name : Upload boot image
       uses: actions/upload-artifact@master

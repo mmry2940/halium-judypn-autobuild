@@ -17,7 +17,6 @@ on:
     types: [published]
 
 jobs:
-  Build-Kernel:
   build:
     runs-on: ubuntu-16.04
     permissions: 

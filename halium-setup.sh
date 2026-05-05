@@ -2,4 +2,4 @@
 source halium.env
 cd $ANDROID_ROOT
 
-./halium/devices/setup sumire
+./halium/devices/setup judypn

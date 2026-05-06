@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest> 
-    <project path="device/lge/judypn" name="mmry2940/android_device_lge_judypn" revision="lineage-22" />
-    <project path="kernel/lge/sdm845" name="mmry2940/android_kernel_lge_sdm845" revision="lineage-22" />
-    <project path="vendor/lge/judypn" name="mmry2940/proprietary_vendor_lge_judypn" revision="lineage-22" />
+    <project path="device/lge/judypn" name="mmry2940/android_device_lge_judypn" revision="lineage-22.0" />
+    <project path="kernel/lge/sdm845" name="mmry2940/android_kernel_lge_sdm845" revision="lineage-22.0" />
+    <project path="vendor/lge/judypn" name="mmry2940/proprietary_vendor_lge_judypn" revision="lineage-22.0" />
     <project path="tools/extract-utils" name="LineageOS/android_tools_extract-utils" revision="lineage-22.0" />
 
     <project path="vendor/lge/sdm845-common" name="mmry2940/proprietary_vendor_lge_sdm845-common" revision="lineage-22.2" />

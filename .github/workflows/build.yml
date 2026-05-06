@@ -29,8 +29,6 @@ jobs:
     steps:
     - name: Checkout into Directory
       uses: actions/checkout@master
-      with:
-        path: ~/judypn
     
     - name: Initialization environment
       run: |
@@ -51,19 +49,20 @@ jobs:
         mkdir -p ~/bin
         wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin
         chmod +x ~/bin/repo
+        cp ~/bin/repo /usr/bin/repo
         git config --global user.name "mmry2940"
         git config --global user.email "mmry2940@gmail.com"
     - name: Downloading source code
       run: |
-        source ~/judypn/halium.env
+        source halium.env
         mkdir -p $ANDROID_ROOT
         cd $ANDROID_ROOT
         repo init -u https://github.com/Halium/android -b halium-12.0 --depth=1
         repo sync -j16 ---no-clone-bundle --no-tags
-    - name: Create Device manifest
-      run: |
-         cd $ANDROID_ROOT/halium/devices/manifests/
-         cp $ANDROID_ROOT/judypn/lge_judypn.xml lge_judypn.xml
+    - name: Copy Device Manifest
+      run: | 
+         cd
+         cp lge_judypn.xml $ANDROID_ROOT/halium/devices/manifests/lge_judypn.xml
     
     - name: Clone device spec source
       run: |

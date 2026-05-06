@@ -27,8 +27,10 @@ jobs:
       ANDROID_ROOT: /home/runner/work/halium/
 
     steps:
-    - name: Checkout
+    - name: Checkout into Directory
       uses: actions/checkout@master
+      with:
+        path: $ANDROID_ROOT/judypn
     
     - name: Initialization environment
       run: |
@@ -56,9 +58,12 @@ jobs:
         source halium.env
         mkdir -p $ANDROID_ROOT
         cd $ANDROID_ROOT
-        repo init
-        repo -u https://github.com/Halium/android -b halium-12.0 --depth1=1 --git-lfs 
-        repo sync -j8 ---no-clone-bundlele --no-tags
+        repo init -u https://github.com/Halium/android -b halium-12.0 --depth=1
+        repo sync -j16 ---no-clone-bundlele --no-tags
+    - name: Create Device manifest
+      run: |
+         cd $ANDROID_ROOT/halium/devices/manifests/
+         cp $ANDROID_ROOT/judypn/lge_judypn.xml lge_judypn.xml
     
     - name: Clone device spec source
       run: |

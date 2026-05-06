@@ -30,7 +30,7 @@ jobs:
     - name: Checkout into Directory
       uses: actions/checkout@master
       with:
-        path: $ANDROID_ROOT/judypn
+        path: ~/judypn
     
     - name: Initialization environment
       run: |

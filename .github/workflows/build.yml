@@ -1,11 +1,3 @@
-#=================================================
-# Description: Build Halium using GitHub Actions
-# Lisence: MIT
-# Author: 0312birdzhang
-# Credit: https://github.com/P3TERX/Actions-OpenWrt
-#=================================================
-# All credits go to dreemurrs-embedded
-
 name: Halium Image
 
 on: 

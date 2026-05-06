@@ -56,13 +56,14 @@ jobs:
         source halium.env
         mkdir -p $ANDROID_ROOT
         cd $ANDROID_ROOT
-        repo repo -u https://github.com/Halium/android -b halium-12.0 --depth1=1 --git-lfs 
+        repo init
+        repo -u https://github.com/Halium/android -b halium-12.0 --depth1=1 --git-lfs 
         repo sync -j8 ---no-clone-bundlele --no-tags
     
     - name: Clone device spec source
       run: |
          cd $ANDROID_ROOT
-         sudo ./halium/devices/setup sumire
+         sudo ./halium/devices/setup judypn
     - name: Build HAL
       run: |
         source build/envsetup.sh
@@ -76,17 +77,17 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: hybris-boot image
-        path: /home/runner/work/halium/out/target/product/santoni/boot.img
+        path: /home/runner/work/halium/out/target/product/judypn/boot.img
 
 
     - name : Upload boot image
       uses: actions/upload-artifact@master
       with:
         name: hybris-boot image
-        path: /home/runner/work/halium/out/target/product/santoni/hybris-boot.img
+        path: /home/runner/work/halium/out/target/product/judypn/hybris-boot.img
 
     - name : Upload system image
       uses: actions/upload-artifact@master
       with:
         name: System image
-        path: /home/runner/work/halium/out/target/product/santoni/system.img
+        path: /home/runner/work/halium/out/target/product/judypn/system.img

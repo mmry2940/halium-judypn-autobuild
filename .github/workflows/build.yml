@@ -55,11 +55,11 @@ jobs:
         git config --global user.email "mmry2940@gmail.com"
     - name: Downloading source code
       run: |
-        source judypn/halium.env
+        source ~/judypn/halium.env
         mkdir -p $ANDROID_ROOT
         cd $ANDROID_ROOT
         repo init -u https://github.com/Halium/android -b halium-12.0 --depth=1
-        repo sync -j16 ---no-clone-bundlele --no-tags
+        repo sync -j16 ---no-clone-bundle --no-tags
     - name: Create Device manifest
       run: |
          cd $ANDROID_ROOT/halium/devices/manifests/

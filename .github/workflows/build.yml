@@ -61,7 +61,8 @@ jobs:
          sudo ./halium/devices/setup judypn
     - name: Build HAL
       run: |
-        source build/envsetup.sh
+        cd $ANDROID_ROOT
+        source $ANDROID_ROOT/build/envsetup.sh
         breakfast judypn
         mka mkbootimg
         mka halium-boot

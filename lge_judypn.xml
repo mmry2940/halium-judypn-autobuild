@@ -6,7 +6,11 @@
 
     <project path="vendor/lge/sdm845-common" name="mmry2940/proprietary_vendor_lge_sdm845-common" revision="lineage-22.2" />
     <project path="device/lge/sdm845-common" name="mmry2940/android_device_lge_sdm845-common" revision="lineage-22.2" />
-    
+
+    <project path="hardware/qcom-caf/wlan" remote="github" name="LineageOS/android_hardware_qcom_wlan" revision="lineage-22.2" />
+    <project path="vendor/qcom/opensource/dataservices" remote="github" name="LineageOS/android_vendor_qcom_opensource_dataservices" revision="lineage-22.2" />
+    <project path="vendor/qcom/opensource/display" remote="github" name="LineageOS/android_vendor_qcom_opensource_display" revision="lineage-22.2" />
+    <project path="device/qcom/sepolicy" remote="github" name="LineageOS/android_device_qcom_sepolicy" revision="lineage-22.2" />
     <project path="hardware/qcom/thermal" remote="github" name="LineageOS/android_hardware_qcom_thermal" revision="lineage-22.2" />
     <project path="hardware/qcom-caf/common" remote="github" name="LineageOS/android_hardware_qcom-caf_common" revision="lineage-22.2" />
     <project path="hardware/qcom-caf/bootctrl" remote="github" name="LineageOS/android_hardware_qcom_bootctrl" revision="lineage-22.2-caf" />

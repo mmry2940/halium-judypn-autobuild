@@ -3,7 +3,7 @@
     <!-- Device Judypn ( QUALCOMM - SDM845 ) -->
     <project path="device/lge/judypn" name="LineageOS/android_device_lge_judypn" revision="lineage-21.0" />
     <project path="kernel/lge/sdm845" name="LineageOS/android_kernel_lge_sdm845" revision="lineage-21.0" />
-    <project path="vendor/lge/judypn" name="TheMuppets/proprietary_vendor_lge_judypn" revision="lineage-21.0" />
+    <project path="vendor/lge/judypn" name="TheMuppets/proprietary_vendor_lge_judypn" revision="lineage-21" />
 
     <project path="vendor/lge/sdm845-common" name="TheMuppets/poprietary_vendor_lge_sdm845-common" revision="lineage-21" />
     <project path="device/lge/sdm845-common" name="LineageOS/android_device_lge_sdm845-common" revision="lineage-21" />

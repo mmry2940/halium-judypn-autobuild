@@ -1,4 +1,4 @@
---depth: Halium Image
+name: Halium Image
 
 on: 
   workflow_dispatch:

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest> 
     <!-- Device Judypn ( QUALCOMM - SDM845 ) -->
-    <project path="device/lge/judypn" name="LineageOS/android_device_lge_judypn" revision="lineage-22.2" />
-    <project path="kernel/lge/sdm845" name="LineageOS/android_kernel_lge_sdm845" revision="lineage-22.2" />
-    <project path="vendor/lge/judypn" name="LineageOS/proprietary_vendor_lge_judypn" revision="lineage-22.2" />
+    <project path="device/lge/judypn" name="LineageOS/android_device_lge_judypn" revision="lineage-21.0" />
+    <project path="kernel/lge/sdm845" name="LineageOS/android_kernel_lge_sdm845" revision="lineage-21.0" />
+    <project path="vendor/lge/judypn" name="LineageOS/proprietary_vendor_lge_judypn" revision="lineage-21.0" />
 
-    <project path="vendor/lge/sdm845-common" name="LineageOS/proprietary_vendor_lge_sdm845-common" revision="lineage-22.2" />
-    <project path="device/lge/sdm845-common" name="LineageOS/android_device_lge_sdm845-common" revision="lineage-22.2" />
+    <project path="vendor/lge/sdm845-common" name="LineageOS/proprietary_vendor_lge_sdm845-common" revision="lineage-21" />
+    <project path="device/lge/sdm845-common" name="LineageOS/android_device_lge_sdm845-common" revision="lineage-21" />
     <!-- Extras -->
-    <project path="hardware/qcom-caf/wlan" remote="github" name="LineageOS/android_hardware_qcom_wlan" revision="lineage-22.2" />
-    <project path="vendor/qcom/opensource/dataservices" remote="github" name="LineageOS/android_vendor_qcom_opensource_dataservices" revision="lineage-22.2" />
-    <project path="vendor/qcom/opensource/display" remote="github" name="LineageOS/android_vendor_qcom_opensource_display" revision="lineage-22.2" />
-    <project path="device/qcom/sepolicy" remote="github" name="LineageOS/android_device_qcom_sepolicy" revision="lineage-22.2" />
-    <project path="hardware/qcom/thermal" remote="github" name="LineageOS/android_hardware_qcom_thermal" revision="lineage-22.2" />
-    <project path="hardware/qcom-caf/common" remote="github" name="LineageOS/android_hardware_qcom-caf_common" revision="lineage-22.2" />
-    <project path="hardware/qcom-caf/bootctrl" remote="github" name="LineageOS/android_hardware_qcom_bootctrl" revision="lineage-22.2-caf" />
-    <project path="hardware/qcom-caf/sdm845/audio" remote="github" name="LineageOS/android_hardware_qcom_audio" revision="lineage-22.2-caf-sdm845" />
-    <project path="hardware/qcom-caf/sdm845/media" remote="github" name="LineageOS/android_hardware_qcom_media" revision="lineage-22.2-caf-sdm845" />
-    <project path="hardware/qcom-caf/sdm845/display" remote="github" name="LineageOS/android_hardware_qcom_display" revision="lineage-22.2-caf-sdm845" />
+    <project path="hardware/qcom-caf/wlan" remote="github" name="LineageOS/android_hardware_qcom_wlan" revision="lineage-21.0" />
+    <project path="vendor/qcom/opensource/dataservices" remote="github" name="LineageOS/android_vendor_qcom_opensource_dataservices" revision="lineage-21.0" />
+    <project path="vendor/qcom/opensource/display" remote="github" name="LineageOS/android_vendor_qcom_opensource_display" revision="lineage-21.0" />
+    <project path="device/qcom/sepolicy" remote="github" name="LineageOS/android_device_qcom_sepolicy" revision="lineage-21" />
+    <project path="hardware/qcom/thermal" remote="github" name="LineageOS/android_hardware_qcom_thermal" revision="lineage-21" />
+    <project path="hardware/qcom-caf/common" remote="github" name="LineageOS/android_hardware_qcom-caf_common" revision="lineage-21" />
+    <project path="hardware/qcom-caf/bootctrl" remote="github" name="LineageOS/android_hardware_qcom_bootctrl" revision="lineage-21-caf" />
+    <project path="hardware/qcom-caf/sdm845/audio" remote="github" name="LineageOS/android_hardware_qcom_audio" revision="lineage-21.0-caf-sdm845" />
+    <project path="hardware/qcom-caf/sdm845/media" remote="github" name="LineageOS/android_hardware_qcom_media" revision="lineage-21.0-caf-sdm845" />
+    <project path="hardware/qcom-caf/sdm845/display" remote="github" name="LineageOS/android_hardware_qcom_display" revision="lineage-21.0-caf-sdm845" />
 </manifest>
 

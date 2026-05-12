@@ -50,7 +50,7 @@ jobs:
         mkdir -p $ANDROID_ROOT
         cd $ANDROID_ROOT
         repo init -u https://github.com/Halium/android -b halium-14.0 --depth=1 --git-lfs
-        repo sync -c -j8 --fail-fast
+        repo sync -c -j12 --fail-fast
     - name: Copy Device Manifest
       run: |
          cp lge_judypn.xml $ANDROID_ROOT/halium/devices/manifests/lge_judypn.xml

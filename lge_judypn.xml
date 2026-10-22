@@ -4,12 +4,8 @@
     <project path="device/lge/judypn" name="LineageOS/android_device_lge_judypn" revision="lineage-21" />
     <project path="kernel/lge/sdm845" name="LineageOS/android_kernel_lge_sdm845" revision="lineage-21" />
     <project path="vendor/lge/judypn" name="TheMuppets/proprietary_vendor_lge_judypn" revision="lineage-21" />
-
-    <!-- Extras -->
     <project path="vendor/lge/sdm845-common" name="TheMuppets/proprietary_vendor_lge_sdm845-common" revision="lineage-21" />
     <project path="device/lge/sdm845-common" name="LineageOS/android_device_lge_sdm845-common" revision="lineage-21" />
-    <project path="vendor/qcom/opensource/dataservices" remote="github" name="LineageOS/android_vendor_qcom_opensource_dataservices" revision="lineage-21.0" />
-    <project path="vendor/qcom/opensource/display" remote="github" name="LineageOS/android_vendor_qcom_opensource_display" revision="lineage-21.0" />
 
     <!-- SEPOLICY -->
     <project path="device/lineage/sepolicy" remote="github" name="LineageOS/android_device_lineage_sepolicy" revision="lineage-21.0" />
@@ -24,5 +20,14 @@
     <project path="hardware/qcom-caf/sdm845/media" remote="github" name="LineageOS/android_hardware_qcom_media" revision="lineage-21.0-caf-sdm845" />
     <project path="hardware/qcom-caf/sdm845/display" remote="github" name="LineageOS/android_hardware_qcom_display" revision="lineage-21.0-caf-sdm845" />
     <project path="hardware/qcom-caf/wlan" remote="github" name="LineageOS/android_hardware_qcom_wlan" revision="lineage-21.0-caf" />
+    <project path="vendor/qcom/opensource/display" remote="github" name="LineageOS/android_vendor_qcom_opensource_display" revision="lineage-21.0" />
+    <project path="vendor/qcom/opensource/libfmjni" remote="github" name="LineageOS/android_vendor_qcom_opensource_libfmjni" revision="lineage-21.0" />
+    <project path="vendor/qcom/opensource/commonsys-intf/display" remote="github" name="LineageOS/android_vendor_qcom_opensource_display-commonsys-intf" revision="lineage-21.0" />
+    
+<!-- Extras -->
+    <project path="vendor/qcom/opensource/dataservices" remote="github" name="LineageOS/android_vendor_qcom_opensource_dataservices" revision="lineage-21.0" />
+    <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" remote="github" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr"  revision="lineage-21.0-legacy-um" />
+    <project path="vendor/qcom/opensource/libfmjni" remote="github" name"LineageOS/android_vendor_qcom_opensource_libfmjni revision="lineage-21.0" />
+    <project pah="vendor/qcom/opensource/commonsys/display" remote="github" name="LineageOS/android_vendor_qcom_opensource_display-commonsys" revision="lineage-21.0" />
+    <project path="
 </manifest>
-

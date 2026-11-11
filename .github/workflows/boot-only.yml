@@ -27,8 +27,10 @@ jobs:
       - name: Setup Build Toolchain
         run: |
           sudo apt-get update
-          sudo apt-get install -y gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi \
-            build-essential bc bison flex libssl-dev libelf-dev libncurses5-dev \
+          sudo apt-get install -y --no-install-recommends \
+            crossbuild-essential-arm64 \
+            crossbuild-essential-armel \
+            build-essential bc bison flex libssl-dev libelf-dev libncurses-dev \
             git curl cpio gzip python3
           
           # Download mkbootimg script since it's not a standard package in 22.04

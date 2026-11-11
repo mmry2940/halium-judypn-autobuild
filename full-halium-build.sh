@@ -54,10 +54,10 @@ if [ ${#MISSING_PKGS[@]} -gt 0 ]; then
         bison build-essential curl flex g++-multilib \
         gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev \
         lib32readline-dev lib32z1-dev libsdl2-dev libpulse-dev liblz4-tool \
-        libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev \
+        libncurses-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev \
         libxml2 libxml2-utils lzop pngcrush rsync schedtool \
         squashfs-tools xsltproc yasm zip zlib1g-dev git repo ccache \
-        gcc-arm-linux-gnueabi
+        crossbuild-essential-armel
 fi
 
 # Ensure Google 'repo' binary exists

@@ -16,7 +16,7 @@ export const BootImageCloudBuilder: React.FC<{ onNavigateToRealPacker: () => voi
 # Run this on Google Colab (free cloud VM, NO local PC needed!)
 # ========================================================
 
-!apt-get update -qq && apt-get install -y -qq gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi build-essential bc bison flex libssl-dev libelf-dev cpio git python3
+!apt-get update -qq && apt-get install -y -qq --no-install-recommends crossbuild-essential-arm64 crossbuild-essential-armel build-essential bc bison flex libssl-dev libelf-dev libncurses-dev cpio git python3
 !curl -sSL https://raw.githubusercontent.com/LineageOS/android_system_core/lineage-21.0/mkbootimg/mkbootimg.py -o mkbootimg && chmod +x mkbootimg
 
 # 1. Clone only the SDM845 kernel (~1.5GB, takes 45 sec)

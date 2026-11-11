@@ -1,0 +1,6 @@
+{
+  "name": "Halium JudyPN Autobuild Studio",
+  "description": "Interactive build environment, manifest editor, and pipeline runner for Halium & Ubuntu Touch images on LG V40 / JudyPN (SDM845)",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

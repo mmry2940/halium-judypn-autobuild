@@ -41,7 +41,8 @@ export const RemotePcGuide: React.FC = () => {
   // One-liner automated script
   const oneLinerSetupAndBuild = config.target === 'boot-only'
     ? `# 1-Liner: Setup & Fast Boot Image Build (~8 min)
-sudo apt update && sudo apt install -y gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi build-essential bc bison flex libssl-dev libelf-dev cpio mkbootimg git && \\
+sudo apt update && sudo apt install -y gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi build-essential bc bison flex libssl-dev libelf-dev cpio git python3 && \\
+sudo curl -sSL https://raw.githubusercontent.com/LineageOS/android_system_core/lineage-21.0/mkbootimg/mkbootimg.py -o /usr/local/bin/mkbootimg && sudo chmod +x /usr/local/bin/mkbootimg && \\
 mkdir -p ${config.buildDir} && cd ${config.buildDir} && \\
 git clone --depth=1 -b lineage-21 https://github.com/LineageOS/android_kernel_lge_sdm845.git kernel && \\
 cd kernel && export ARCH=arm64 && export CROSS_COMPILE=aarch64-linux-gnu- && export CROSS_COMPILE_ARM32=arm-linux-gnueabi- && \\
@@ -54,7 +55,7 @@ ifconfig usb0 192.168.2.15 up 2>/dev/null; busybox telnetd -l /bin/sh -p 23 2>/d
 exec /bin/sh
 EOF
 chmod +x ramdisk/init && (cd ramdisk && find . | cpio -o -H newc | gzip -9 > ../ramdisk.cpio.gz) && \\
-mkbootimg --kernel kernel/arch/arm64/boot/Image.gz-dtb --ramdisk ramdisk.cpio.gz \\
+python3 /usr/local/bin/mkbootimg --kernel kernel/arch/arm64/boot/Image.gz-dtb --ramdisk ramdisk.cpio.gz \\
   --cmdline "console=ttyMSM0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=1d84000.ufshc androidboot.selinux=permissive telnet_debug=1 usb_net=192.168.2.15" \\
   --base 0x00000000 --pagesize 4096 --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --output hybris-boot.img && \\
 echo "SUCCESS: hybris-boot.img built in $(pwd)/hybris-boot.img"`
@@ -106,7 +107,9 @@ echo "SUCCESS: out/target/product/judypn/hybris-boot.img built!"`;
         ? 'Installs the AArch64 cross-compiler, kernel build tools, and mkbootimg (~1 min):'
         : 'Installs full Android build packages, 32-bit multilib libraries, and Google repo tool (~3 min):',
       command: config.target === 'boot-only'
-        ? `sudo apt update && sudo apt install -y gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi build-essential bc bison flex libssl-dev libelf-dev cpio gzip mkbootimg git`
+        ? `sudo apt update && sudo apt install -y gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi build-essential bc bison flex libssl-dev libelf-dev cpio gzip git python3
+sudo curl -sSL https://raw.githubusercontent.com/LineageOS/android_system_core/lineage-21.0/mkbootimg/mkbootimg.py -o /usr/local/bin/mkbootimg
+sudo chmod +x /usr/local/bin/mkbootimg`
         : `sudo apt update && sudo apt install -y openjdk-8-jdk android-tools-adb bc bison build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libsdl2-dev libpulse-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev git repo gcc-arm-linux-gnueabi
 mkdir -p ~/bin && wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin && chmod +x ~/bin/repo
 export PATH=~/bin:$PATH`,
@@ -154,7 +157,7 @@ EOF
 chmod +x ramdisk/init
 cd ramdisk && find . | cpio -o -H newc | gzip -9 > ../ramdisk.cpio.gz && cd ..
 
-mkbootimg \\
+python3 /usr/local/bin/mkbootimg \\
   --kernel kernel/arch/arm64/boot/Image.gz-dtb \\
   --ramdisk ramdisk.cpio.gz \\
   --cmdline "console=ttyMSM0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=1d84000.ufshc androidboot.selinux=permissive telnet_debug=1 usb_net=192.168.2.15" \\

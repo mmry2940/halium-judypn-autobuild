@@ -16,7 +16,8 @@ export const BootImageCloudBuilder: React.FC<{ onNavigateToRealPacker: () => voi
 # Run this on Google Colab (free cloud VM, NO local PC needed!)
 # ========================================================
 
-!apt-get update -qq && apt-get install -y -qq gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi build-essential bc bison flex libssl-dev libelf-dev cpio mkbootimg
+!apt-get update -qq && apt-get install -y -qq gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi build-essential bc bison flex libssl-dev libelf-dev cpio git python3
+!curl -sSL https://raw.githubusercontent.com/LineageOS/android_system_core/lineage-21.0/mkbootimg/mkbootimg.py -o mkbootimg && chmod +x mkbootimg
 
 # 1. Clone only the SDM845 kernel (~1.5GB, takes 45 sec)
 !git clone --depth=1 -b ${kernelBranch} https://github.com/LineageOS/android_kernel_lge_sdm845.git kernel
@@ -41,7 +42,7 @@ EOF
 !cd ramdisk && find . | cpio -o -H newc | gzip -9 > ../ramdisk.cpio.gz
 
 # 4. Pack real hybris-boot.img
-!mkbootimg \\
+!python3 mkbootimg \\
   --kernel kernel/arch/arm64/boot/Image.gz-dtb \\
   --ramdisk ramdisk.cpio.gz \\
   --cmdline "console=ttyMSM0,115200,n8 androidboot.hardware=qcom androidboot.bootdevice=1d84000.ufshc androidboot.selinux=${selinuxMode} telnet_debug=1 usb_net=192.168.2.15" \\

@@ -29,7 +29,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi \
             build-essential bc bison flex libssl-dev libelf-dev libncurses5-dev \
-            git curl cpio gzip python3 mkbootimg
+            git curl cpio gzip python3
+          
+          # Download mkbootimg script since it's not a standard package in 22.04
+          sudo curl -sSL https://raw.githubusercontent.com/LineageOS/android_system_core/lineage-21.0/mkbootimg/mkbootimg.py -o /usr/local/bin/mkbootimg
+          sudo chmod +x /usr/local/bin/mkbootimg
 
       - name: Clone SDM845 Kernel Source (Lineage-21)
         run: |
@@ -83,7 +87,7 @@ jobs:
           
           KERNEL_BIN=$(find kernel/arch/arm64/boot/ -name "Image.gz-dtb" -o -name "Image.gz" | head -n 1)
           
-          mkbootimg \
+          python3 /usr/local/bin/mkbootimg \
             --kernel "$KERNEL_BIN" \
             --ramdisk ramdisk.cpio.gz \
             --cmdline "$CMDLINE" \

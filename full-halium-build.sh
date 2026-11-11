@@ -46,11 +46,10 @@ for pkg in openjdk-8-jdk android-tools-adb bc bison flex gcc g++ git make ccache
     fi
 done
 
-if [ ${#MISSING_PKGS[@]} -gt 0 ]; then
     echo "Installing missing packages: ${MISSING_PKGS[*]}"
     # Fix potential DNS/Mirror issues by forcing main Ubuntu archives and adding retries
-    sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu/|http://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list || true
-    sudo sed -i 's|http://security.ubuntu.com/ubuntu/|http://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list || true
+    sudo sed -i 's|azure.archive.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
+    sudo sed -i 's|security.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
     
     # Retry apt-get update with exponential backoff
     for i in {1..3}; do

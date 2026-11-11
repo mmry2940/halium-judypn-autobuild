@@ -42,9 +42,12 @@ export const RemotePcGuide: React.FC = () => {
   const oneLinerSetupAndBuild = config.target === 'boot-only'
     ? `# 1-Liner: Setup & Fast Boot Image Build (~8 min)
 # Fix potential DNS/Mirror issues and retry apt
+export DEBIAN_FRONTEND=noninteractive
 sudo sed -i 's|azure.archive.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
 sudo sed -i 's|security.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
-for i in {1..3}; do sudo apt update && break || sleep 10; done && \\
+sudo sed -i 's/^deb-src/# deb-src/' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
+echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
+for i in {1..3}; do sudo apt update -y -qq && break || sleep 10; done && \\
 sudo apt install -y --no-install-recommends crossbuild-essential-arm64 crossbuild-essential-armel build-essential bc bison flex libssl-dev libelf-dev libncurses-dev cpio git python3 && \\
 sudo curl -sSL https://raw.githubusercontent.com/LineageOS/android_system_core/lineage-21.0/mkbootimg/mkbootimg.py -o /usr/local/bin/mkbootimg && sudo chmod +x /usr/local/bin/mkbootimg && \\
 mkdir -p ${config.buildDir} && cd ${config.buildDir} && \\
@@ -65,9 +68,12 @@ python3 /usr/local/bin/mkbootimg --kernel "$(find kernel/arch/arm64/boot/ -name 
 echo "SUCCESS: hybris-boot.img built in $(pwd)/hybris-boot.img"`
     : `# 1-Liner: Setup & Full Halium AOSP Build (~2-3 hours)
 # Fix potential DNS/Mirror issues and retry apt
+export DEBIAN_FRONTEND=noninteractive
 sudo sed -i 's|azure.archive.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
 sudo sed -i 's|security.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
-for i in {1..3}; do sudo apt update && break || sleep 10; done && \\
+sudo sed -i 's/^deb-src/# deb-src/' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
+echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
+for i in {1..3}; do sudo apt update -y -qq && break || sleep 10; done && \\
 sudo apt install -y openjdk-8-jdk android-tools-adb bc bison build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses-dev lib32readline-dev lib32z1-dev libsdl2-dev libpulse-dev liblz4-tool libncurses-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev git repo tmux crossbuild-essential-armel && \\
 mkdir -p ~/bin && wget -qO ~/bin/repo https://storage.googleapis.com/git-repo-downloads/repo && chmod +x ~/bin/repo && export PATH=~/bin:$PATH && \\
 mkdir -p ${config.buildDir} && cd ${config.buildDir} && \\
@@ -115,15 +121,21 @@ echo "SUCCESS: out/target/product/judypn/hybris-boot.img built!"`;
         ? 'Installs the AArch64 cross-compiler, kernel build tools, and mkbootimg (~1 min):'
         : 'Installs full Android build packages, 32-bit multilib libraries, and Google repo tool (~3 min):',
       command: config.target === 'boot-only'
-        ? `sudo sed -i 's|azure.archive.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
+        ? `export DEBIAN_FRONTEND=noninteractive
+sudo sed -i 's|azure.archive.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
 sudo sed -i 's|security.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
-for i in {1..3}; do sudo apt update && break || sleep 10; done
+sudo sed -i 's/^deb-src/# deb-src/' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
+echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
+for i in {1..3}; do sudo apt update -y -qq && break || sleep 10; done
 sudo apt install -y --no-install-recommends crossbuild-essential-arm64 crossbuild-essential-armel build-essential bc bison flex libssl-dev libelf-dev libncurses-dev cpio gzip git python3
 sudo curl -sSL https://raw.githubusercontent.com/LineageOS/android_system_core/lineage-21.0/mkbootimg/mkbootimg.py -o /usr/local/bin/mkbootimg
 sudo chmod +x /usr/local/bin/mkbootimg`
-        : `sudo sed -i 's|azure.archive.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
+        : `export DEBIAN_FRONTEND=noninteractive
+sudo sed -i 's|azure.archive.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
 sudo sed -i 's|security.ubuntu.com|archive.ubuntu.com|g' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
-for i in {1..3}; do sudo apt update && break || sleep 10; done
+sudo sed -i 's/^deb-src/# deb-src/' /etc/apt/sources.list /etc/apt/sources.list.d/* || true
+echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
+for i in {1..3}; do sudo apt update -y -qq && break || sleep 10; done
 sudo apt install -y openjdk-8-jdk android-tools-adb bc bison build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses-dev lib32readline-dev lib32z1-dev libsdl2-dev libpulse-dev liblz4-tool libncurses-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev git repo crossbuild-essential-armel
 mkdir -p ~/bin && wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin && chmod +x ~/bin/repo
 export PATH=~/bin:$PATH`,

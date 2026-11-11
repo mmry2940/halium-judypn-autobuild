@@ -1,0 +1,270 @@
+30m 29s
+Run sudo apt-get update
+Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Get:6 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [780 kB]
+Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [1055 kB]
+Get:9 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [23.6 kB]
+Ign:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+Ign:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Ign:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Ign:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease
+Ign:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+Ign:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Ign:2 https://archive.ubuntu.com/ubuntu jammy InRelease
+Ign:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Err:2 https://security.ubuntu.com/ubuntu jammy InRelease
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:3 https://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Ign:4 https://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Ign:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease
+Err:3 https://security.ubuntu.com/ubuntu jammy-updates InRelease
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:5 https://archive.ubuntu.com/ubuntu jammy-security InRelease
+Err:4 https://security.ubuntu.com/ubuntu jammy-backports InRelease
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Err:5 https://security.ubuntu.com/ubuntu jammy-security InRelease
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Fetched 1862 kB in 3min 16s (9520 B/s)
+Reading package lists...
+W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/jammy/InRelease  Temporary failure resolving 'azure.archive.ubuntu.com'
+W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/jammy-updates/InRelease  Temporary failure resolving 'azure.archive.ubuntu.com'
+W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/jammy-backports/InRelease  Temporary failure resolving 'azure.archive.ubuntu.com'
+W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/jammy-security/InRelease  Temporary failure resolving 'azure.archive.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+bc is already the newest version (1.07.1-3build1).
+bc set to manually installed.
+build-essential is already the newest version (12.9ubuntu3).
+build-essential set to manually installed.
+flex is already the newest version (2.6.4-8build2).
+bison is already the newest version (2:3.8.2+dfsg-1ubuntu0.22.04.1).
+cpio is already the newest version (2.13+dfsg-7ubuntu0.2).
+cpio set to manually installed.
+curl is already the newest version (7.81.0-1ubuntu1.30).
+gzip is already the newest version (1.10-4ubuntu4.2).
+libncurses-dev is already the newest version (6.3-2ubuntu0.3).
+libncurses-dev set to manually installed.
+libssl-dev is already the newest version (3.0.2-0ubuntu1.30).
+python3 is already the newest version (3.10.6-1~22.04.1).
+git is already the newest version (1:2.56.0-0ppa1~ubuntu22.04.2).
+The following additional packages will be installed:
+  binutils-aarch64-linux-gnu binutils-arm-linux-gnueabi
+  cpp-11-aarch64-linux-gnu cpp-11-arm-linux-gnueabi cpp-aarch64-linux-gnu
+  cpp-arm-linux-gnueabi cross-config dpkg-cross g++-11-aarch64-linux-gnu
+  g++-11-arm-linux-gnueabi g++-aarch64-linux-gnu g++-arm-linux-gnueabi
+  gcc-11-aarch64-linux-gnu gcc-11-aarch64-linux-gnu-base
+  gcc-11-arm-linux-gnueabi gcc-11-arm-linux-gnueabi-base gcc-11-cross-base
+  gcc-12-cross-base gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi
+  libasan6-arm64-cross libasan6-armel-cross libatomic1-arm64-cross
+  libatomic1-armel-cross libc6-arm64-cross libc6-armel-cross
+  libc6-dev-arm64-cross libc6-dev-armel-cross libconfig-auto-perl
+  libconfig-inifiles-perl libdebian-dpkgcross-perl libfile-homedir-perl
+  libfile-which-perl libgcc-11-dev-arm64-cross libgcc-11-dev-armel-cross
+  libgcc-s1-arm64-cross libgcc-s1-armel-cross libgomp1-arm64-cross
+  libgomp1-armel-cross libhwasan0-arm64-cross libio-string-perl
+  libitm1-arm64-cross liblsan0-arm64-cross libstdc++-11-dev-arm64-cross
+  libstdc++-11-dev-armel-cross libstdc++6-arm64-cross libstdc++6-armel-cross
+  libtsan0-arm64-cross libubsan1-arm64-cross libubsan1-armel-cross
+  libxml-simple-perl libyaml-perl linux-libc-dev-arm64-cross
+  linux-libc-dev-armel-cross
+Suggested packages:
+  binutils-doc gcc-11-locales cpp-doc binutils-multiarch gcc-11-doc
+  manpages-dev gdb-aarch64-linux-gnu gcc-doc gdb-arm-linux-gnueabi
+  libyaml-shell-perl
+Recommended packages:
+  libyaml-libyaml-perl | libyaml-syck-perl
+The following NEW packages will be installed:
+  binutils-aarch64-linux-gnu binutils-arm-linux-gnueabi
+  cpp-11-aarch64-linux-gnu cpp-11-arm-linux-gnueabi cpp-aarch64-linux-gnu
+  cpp-arm-linux-gnueabi cross-config crossbuild-essential-arm64
+  crossbuild-essential-armel dpkg-cross g++-11-aarch64-linux-gnu
+  g++-11-arm-linux-gnueabi g++-aarch64-linux-gnu g++-arm-linux-gnueabi
+  gcc-11-aarch64-linux-gnu gcc-11-aarch64-linux-gnu-base
+  gcc-11-arm-linux-gnueabi gcc-11-arm-linux-gnueabi-base gcc-11-cross-base
+  gcc-12-cross-base gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi
+  libasan6-arm64-cross libasan6-armel-cross libatomic1-arm64-cross
+  libatomic1-armel-cross libc6-arm64-cross libc6-armel-cross
+  libc6-dev-arm64-cross libc6-dev-armel-cross libconfig-auto-perl
+  libconfig-inifiles-perl libdebian-dpkgcross-perl libelf-dev
+  libfile-homedir-perl libfile-which-perl libgcc-11-dev-arm64-cross
+  libgcc-11-dev-armel-cross libgcc-s1-arm64-cross libgcc-s1-armel-cross
+  libgomp1-arm64-cross libgomp1-armel-cross libhwasan0-arm64-cross
+  libio-string-perl libitm1-arm64-cross liblsan0-arm64-cross
+  libstdc++-11-dev-arm64-cross libstdc++-11-dev-armel-cross
+  libstdc++6-arm64-cross libstdc++6-armel-cross libtsan0-arm64-cross
+  libubsan1-arm64-cross libubsan1-armel-cross libxml-simple-perl libyaml-perl
+  linux-libc-dev-arm64-cross linux-libc-dev-armel-cross
+0 upgraded, 57 newly installed, 0 to remove and 5 not upgraded.
+Need to get 110 MB of archives.
+After this operation, 378 MB of additional disk space will be used.
+Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Ign:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-aarch64-linux-gnu-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:4 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-11-arm-linux-gnueabi-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 cpp-11-arm-linux-gnueabi amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:6 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 cpp-aarch64-linux-gnu amd64 4:11.2.0-1ubuntu1
+Ign:7 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 cpp-arm-linux-gnueabi amd64 4:11.2.0-1ubuntu1
+Ign:8 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-aarch64-linux-gnu amd64 2.38-4ubuntu2.12
+Ign:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-cross-base all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-12-cross-base all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:11 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libc6-arm64-cross all 2.35-0ubuntu1cross3
+Ign:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-s1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++6-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:20 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:21 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libhwasan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:22 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:23 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:24 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 gcc-aarch64-linux-gnu amd64 4:11.2.0-1ubuntu1
+Ign:25 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 linux-libc-dev-arm64-cross all 5.15.0-22.22cross3
+Ign:26 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libc6-dev-arm64-cross all 2.35-0ubuntu1cross3
+Ign:27 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++-11-dev-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:28 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:29 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 g++-aarch64-linux-gnu amd64 4:11.2.0-1ubuntu1
+Ign:30 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libconfig-inifiles-perl all 3.000003-1ubuntu0.1
+Ign:31 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libio-string-perl all 1.08-3.1
+Ign:32 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libxml-simple-perl all 2.25-1
+Ign:33 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libyaml-perl all 1.30-1ubuntu0.22.04.1
+Ign:34 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libconfig-auto-perl all 0.44-1.1
+Ign:35 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libfile-which-perl all 1.23-1
+Ign:36 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libfile-homedir-perl all 1.006-1
+Ign:37 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libdebian-dpkgcross-perl all 2.6.18+nmu2
+Ign:38 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 cross-config all 2.6.18+nmu2
+Ign:39 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 dpkg-cross all 2.6.18+nmu2
+Ign:40 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 crossbuild-essential-arm64 all 12.9ubuntu3
+Ign:41 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 binutils-arm-linux-gnueabi amd64 2.38-4ubuntu2.12
+Ign:42 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libc6-armel-cross all 2.35-0ubuntu1cross3
+Ign:43 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgcc-s1-armel-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:44 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgomp1-armel-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:45 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libatomic1-armel-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:46 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libasan6-armel-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:47 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libstdc++6-armel-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:48 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libubsan1-armel-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:49 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgcc-11-dev-armel-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:50 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-11-arm-linux-gnueabi amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:51 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 gcc-arm-linux-gnueabi amd64 4:11.2.0-1ubuntu1
+Ign:52 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 linux-libc-dev-armel-cross all 5.15.0-22.22cross3
+Ign:53 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libc6-dev-armel-cross all 2.35-0ubuntu1cross3
+Ign:54 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libstdc++-11-dev-armel-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:55 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 g++-11-arm-linux-gnueabi amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:56 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 g++-arm-linux-gnueabi amd64 4:11.2.0-1ubuntu1
+Ign:57 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 crossbuild-essential-armel all 12.9ubuntu3
+Ign:58 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libelf-dev amd64 0.186-1ubuntu0.1
+Ign:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-aarch64-linux-gnu-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:2 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-aarch64-linux-gnu-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:4 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-11-arm-linux-gnueabi-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:2 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-aarch64-linux-gnu-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+Err:2 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 gcc-11-aarch64-linux-gnu-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:3 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 cpp-11-arm-linux-gnueabi amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:4 https://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-11-arm-linux-gnueabi-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:3 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Err:3 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 cpp-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:5 https://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 cpp-11-arm-linux-gnueabi amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:6 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 cpp-aarch64-linux-gnu amd64 4:11.2.0-1ubuntu1
+Ign:4 https://security.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-11-arm-linux-gnueabi-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+Err:4 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/universe amd64 gcc-11-arm-linux-gnueabi-base amd64 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:5 https://security.ubuntu.com/ubuntu jammy-updates/universe amd64 cpp-11-arm-linux-gnueabi amd64 11.4.0-1ubuntu1~22.04.3cross1
+Err:5 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/universe amd64 cpp-11-arm-linux-gnueabi amd64 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:7 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 cpp-arm-linux-gnueabi amd64 4:11.2.0-1ubuntu1
+Ign:6 https://archive.ubuntu.com/ubuntu jammy/main amd64 cpp-aarch64-linux-gnu amd64 4:11.2.0-1ubuntu1
+Err:6 https://security.ubuntu.com/ubuntu jammy/main amd64 cpp-aarch64-linux-gnu amd64 4:11.2.0-1ubuntu1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:8 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-aarch64-linux-gnu amd64 2.38-4ubuntu2.12
+Ign:7 https://archive.ubuntu.com/ubuntu jammy/universe amd64 cpp-arm-linux-gnueabi amd64 4:11.2.0-1ubuntu1
+Err:7 https://security.ubuntu.com/ubuntu jammy/universe amd64 cpp-arm-linux-gnueabi amd64 4:11.2.0-1ubuntu1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:8 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-aarch64-linux-gnu amd64 2.38-4ubuntu2.12
+Ign:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-cross-base all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:8 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-aarch64-linux-gnu amd64 2.38-4ubuntu2.12
+Err:8 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 binutils-aarch64-linux-gnu amd64 2.38-4ubuntu2.12
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-12-cross-base all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:9 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-cross-base all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:11 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libc6-arm64-cross all 2.35-0ubuntu1cross3
+Ign:10 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-12-cross-base all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:9 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-cross-base all 11.4.0-1ubuntu1~22.04.3cross1
+Err:9 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 gcc-11-cross-base all 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:11 https://archive.ubuntu.com/ubuntu jammy/main amd64 libc6-arm64-cross all 2.35-0ubuntu1cross3
+Ign:10 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-12-cross-base all 12.3.0-1ubuntu1~22.04.3cross1
+Err:10 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 gcc-12-cross-base all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-s1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:12 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-s1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:11 https://security.ubuntu.com/ubuntu jammy/main amd64 libc6-arm64-cross all 2.35-0ubuntu1cross3
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:13 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:12 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-s1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:12 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libgcc-s1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:14 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:13 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:13 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libgomp1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:15 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:14 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:14 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libitm1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:16 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:15 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:15 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libatomic1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:17 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:16 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Err:16 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libasan6-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++6-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:18 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:17 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:17 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 liblsan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:20 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:19 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++6-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:18 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Err:18 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libtsan0-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:21 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libhwasan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:20 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:19 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++6-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:19 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libstdc++6-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:22 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:21 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libhwasan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Ign:20 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:20 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libubsan1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:23 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:22 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Ign:21 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libhwasan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+Err:21 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libhwasan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:24 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 gcc-aarch64-linux-gnu amd64 4:11.2.0-1ubuntu1
+Ign:23 https://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Ign:22 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+Err:22 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libgcc-11-dev-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'
+Ign:25 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 linux-libc-dev-arm64-cross all 5.15.0-22.22cross3
+Ign:24 https://archive.ubuntu.com/ubuntu jammy/main amd64 gcc-aarch64-linux-gnu amd64 4:11.2.0-1ubuntu1
+Ign:23 https://security.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+Err:23 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 gcc-11-aarch64-linux-gnu amd64 11.4.0-1ubuntu1~22.04.3cross1
+  Temporary failure resolving 'azure.archive.ubuntu.com'

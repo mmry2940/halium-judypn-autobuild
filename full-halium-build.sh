@@ -48,7 +48,15 @@ done
 
 if [ ${#MISSING_PKGS[@]} -gt 0 ]; then
     echo "Installing missing packages: ${MISSING_PKGS[*]}"
-    sudo apt-get update
+    # Fix potential DNS/Mirror issues by forcing main Ubuntu archives and adding retries
+    sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu/|http://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list || true
+    sudo sed -i 's|http://security.ubuntu.com/ubuntu/|http://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list || true
+    
+    # Retry apt-get update with exponential backoff
+    for i in {1..3}; do
+        sudo apt-get update && break || (echo "Apt update failed, retrying in 10s..." && sleep 10)
+    done
+
     sudo apt-get install -y \
         openjdk-8-jdk android-tools-adb bc \
         bison build-essential curl flex g++-multilib \
